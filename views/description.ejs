@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description - Virtual Pathology Museum</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Virtual Pathology Museum</div>
+            <div class="auth-buttons">
+                <a href="/" class="btn btn-login">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="description-container">
+            <div class="description-content">
+                <%- content %>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .description-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .description-content {
+            background: var(--soft-white);
+            padding: 48px;
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(20, 99, 33, 0.06);
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 16px;
+            color: var(--text-medium);
+        }
+    </style>
+</body>
+</html>

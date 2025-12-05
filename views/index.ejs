@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pathology Museum</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Virtual Pathology Museum</div>
+            <div class="auth-buttons">
+                <% if (user) { %>
+                    <div class="user-info">
+                        <span>Welcome, <%= user.email %></span>
+                        <form action="/logout" method="POST" style="display: inline;">
+                            <button type="submit" class="logout-btn">Logout</button>
+                        </form>
+                    </div>
+                <% } else { %>
+                    <a href="/login" class="btn btn-login">Login</a>
+                    <a href="/signup" class="btn btn-signup">Sign Up</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="title">VIRTUAL PATHOLOGY MUSEUM</h1>
+        
+        <div class="content">
+            <p class="welcome-text">
+                Welcome to our <span class="highlight-blue">VIRTUAL PATHOLOGY MUSEUM</span>! You will find both 
+                <span class="highlight-blue">virtual pathology pots</span> and 
+                <span class="highlight-blue">virtual microscopy slides</span> here.
+            </p>
+
+            <p>
+                Explore our virtual pathology pots - you can rotate and magnify them - almost as if you are holding them in your hands! 
+                Click on the bottom left orange arrow to open up the label menu, so that you can view annotations.
+            </p>
+
+            <p>
+                Here are simple instructions on <a href="#">how to manoeuvre the Virtual Pots</a>.
+            </p>
+
+            <p>
+                Many more features are available - Clinical vignettes, Macroscopic descriptions, Microscopic correlates and even unique 
+                radiologic images enabling you to "see through" the pots!
+            </p>
+
+            <p>
+                View this in tandem with <a href="#">Pathology Demystified</a>, and test your observational skills before you reveal the annotations!
+            </p>
+
+            <p>
+                <span class="highlight-red">For alternative microscopy slides, click</span> <a href="#">here</a>
+            </p>
+        </div>
+        
+        <div class="cards-section">
+            <div class="cards-grid">
+                <div class="card blue-card">
+                    <div class="card-image">
+                        <img src="/uv2.png" alt="Intestinal gangrene">
+                    </div>
+                    <div class="card-content">
+                        <h3>Intestinal gangrene</h3>
+                        <div class="card-links">
+                            <a href="/description/intestinal-gangrene">Description</a>
+                            <a href="/video/intestinal-gangrene">Video</a>
+                            <a href="/model/intestinal-gangrene">3D Model</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card orange-card">
+                    <div class="card-image">
+                        <img src="/uv1main.png" alt="Leiomyoma">
+                    </div>
+                    <div class="card-content">
+                        <h3>Leiomyoma</h3>
+                        <div class="card-links">
+                            <a href="/description/leiomyoma">Description</a>
+                            <a href="/video/leiomyoma">Video</a>
+                            <a href="/model/leiomyoma">3D Model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card blue-card">
+                    <div class="card-image">
+                        <img src="/uv1.png" alt="Acute appendicitis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Acute appendicitis</h3>
+                        <div class="card-links">
+                            <a href="/description/acute-appendicitis">Description</a>
+                            <a href="/video/acute-appendicitis">Video</a>
+                            <a href="/model/acute-appendicitis">3D Model</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card orange-card">
+                    <div class="card-image">
+                        <img src="/uv22.png" alt="Lipoma">
+                    </div>
+                    <div class="card-content">
+                        <h3>Lipoma</h3>
+                        <div class="card-links">
+                            <a href="/description/lipoma">Description</a>
+                            <a href="/video/lipoma">Video</a>
+                            <a href="/model/lipoma">3D Model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
