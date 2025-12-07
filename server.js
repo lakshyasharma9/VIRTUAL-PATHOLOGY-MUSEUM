@@ -132,7 +132,7 @@ app.get('/video/:type', (req, res) => {
   const { type } = req.params;
   console.log('Video request for type:', type);
   const videos = {
-    'intestinal-gangrene': 'intestinal_22.mp4',
+    'intestinal-gangrene': 'intestinal_22.MP4',
     'leiomyoma': 'Leiomyoma.mp4',
     'acute-appendicitis': 'acute.mp4',
     'lipoma': 'lipoma.mp4'
